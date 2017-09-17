@@ -1,0 +1,12 @@
+﻿@model TeamOfPlayer.Team
+
+@{
+    ViewBag.Title = "Team details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Team details</h2>
+@Html.DisplayFor(m => m.Name)
+@Html.DisplayFor(m => m.Coach)
+@Html.DisplayFor(m => m.Players)
+

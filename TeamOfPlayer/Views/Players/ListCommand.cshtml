@@ -1,0 +1,31 @@
+﻿@model IEnumerable<TeamOfPlayer.Team>
+
+@{
+    ViewBag.Title = "List command";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List command</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Coach</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>
+                @Html.DisplayFor(m => item.Name)
+            </th>
+            <th>
+                @Html.DisplayFor(m => item.Coach) 
+            </th>
+            <th>
+                @Html.ActionLink("Details", "TeamDetails", new { id = item.Id })
+            </th>
+        </tr>
+    }
+</table>
+
+=
